@@ -1,0 +1,19 @@
+[package]
+name = "duckdb-polars-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+duckdb = { version = "1.1.1", features = ["bundled", "chrono", "polars"] }
+anyhow = "1.0.95"
+polars = { version = "0.41.2", features = [
+    "lazy",
+    "temporal",
+    "serde",
+    "cum_agg",
+    "pivot",
+    "dtype-struct",
+] }
+hashbrown = { version = "=0.14.5", features = ["raw"] }
+chrono = "0.4.38"
+chrono-tz = "0.10.0"
